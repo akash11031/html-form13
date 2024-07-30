@@ -119,11 +119,11 @@ header .hb-btns .btn-info:hover{
 
 .features-section{
  border-bottom: 1px solid rgb(214, 214, 214);
- margin: 20px 0px;
+ margin: 20px 0px ;
 }
 
 .features-section .features-heading{
-    margin: 80px 0px;
+    margin: 80px 0px 0px 0px;
 }
 
 .features-section .features-heading h5{
@@ -203,7 +203,6 @@ margin-top: 80px;
 }
 
 .details-section .details-inner p{
-    padding-top: 25px;
     width: 87%;
     margin-bottom: 25px;
     font-size: 16px;
@@ -269,6 +268,44 @@ margin-bottom: auto;
     line-height: 25px;
     font-weight: 300;
     color: #999999;
-    margin-top: 60px;
     width: 86%;
+}
+
+/* ***********vertical line after-before************* */
+
+.v-line{
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.v-line .line{
+    width: 200px;
+    height: 10px;
+    background-color: transparent;
+    margin: 10px;
+    position: relative;
+}
+
+.features-section .v-line .line{
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.v-line .line::after{
+    content: '';
+    background: #008ed6;
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    left: 0;
+    top: 0;
+    transition: all 0.3s linear;
+}
+ 
+.v-line .line:hover::after{
+    width: 200px;
 }
